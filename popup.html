@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>GitHub Folder Uploader</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+  <div id="auth-section">
+    <h2>GitHub Folder Uploader</h2>
+    <button id="login-btn">Войти через GitHub</button>
+    <p id="auth-status">Не авторизован</p>
+  </div>
+
+  <div id="main-section" style="display:none;">
+    <h3>Загрузка папки в GitHub</h3>
+    <button id="logout-btn">Выйти</button>
+
+    <div class="field">
+      <label>Репозиторий:</label>
+      <select id="repo-select">
+        <option value="">— выберите репозиторий —</option>
+      </select>
+      <button id="refresh-repos">Обновить список</button>
+    </div>
+
+    <div class="field">
+      <input type="text" id="new-repo-name" placeholder="Или создайте новый репозиторий..." />
+      <button id="create-repo-btn">Создать</button>
+    </div>
+
+    <button id="select-folder-btn" disabled>Выбрать папку и загрузить</button>
+
+    <div id="status" class="status"></div>
+    <progress id="progress" value="0" max="100" style="display:none; width:100%;"></progress>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
