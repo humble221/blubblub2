@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Folder Uploader",
+  "description": "Загрузка папки с файлами и вложенной структурой прямо в GitHub",
+  "version": "1.0.0",
+  "permissions": [
+    "storage",
+    "identity"
+  ],
+  "host_permissions": [
+    "https://api.github.com/*",
+    "https://github.com/*"
+  ],
+  "oauth2": {
+    "client_id": "Ov23liZ9oI6otOqy6L92",
+    "scopes": [
+      "repo"
+    ]
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+}
